@@ -1,9 +1,9 @@
-import React from 'react'
+
 import { icons } from '../../public/icons/icons'
 
-const Header = (register handleSubmit reset={reset} onSubmit={onSubmit}) => {
+const Header = ({ register, handleSubmit, reset, onSubmit }: { register: any, handleSubmit: any, reset: any, onSubmit: any }) => {
     return (
-        <div className=' w-full '>
+        <div className=' w-full  px-10 sm:px-8 lg:px-2 xl:px-0 pt-[200px] sm:pt-[150px] lg:pt-[0px] '>
             <div className='flex items-center justify-between'>
                 <div className='flex items-center '>
                     {icons?.sunnyWeather}
@@ -13,15 +13,15 @@ const Header = (register handleSubmit reset={reset} onSubmit={onSubmit}) => {
                 </div>
 
                 <button className="flex items-center gap-1 bg-[#38235C] border border-[#4B556380] 
-                      font-inter font-normal text-sm leading-none tracking-normal text-white px-3 py-2 rounded-lg ">
+                  font-inter font-normal text-sm leading-none tracking-normal text-white px-3 py-2 rounded-lg ">
                     <span className="text-white">{icons?.settingsIcon}</span>
                     Units
                     <span className="text-white">{icons?.downArrowIcon}</span>
                 </button>
             </div>
 
-            {/* How's the sky looking today? */}
-            <div className='flex flex-col items-center justify-center '>
+
+            <div className='flex flex-col items-center justify-center px-8 sm:px-8 lg:px-2 xl:px-0  '>
                 <p className='my-8 font-roboto font-light text-4xl '>How's the sky looking today?</p>
                 <div>
                     <form onSubmit={handleSubmit(onSubmit)} className="flex items-center w-full">
@@ -31,10 +31,10 @@ const Header = (register handleSubmit reset={reset} onSubmit={onSubmit}) => {
                                 {icons?.searchIcon}
                             </div>
 
-                            <input  {...register("place", { required: "Please enter a place" })} type="text" id="voice-search" className=" w-[641px] bg-[#1F293780] border border-[#4B5563B2] text-gray-900 text-sm rounded-lg focus:ring-[#38235C] focus:border-[#38235C] block  ps-10 p-2.5" placeholder="Search for a place..." />
+                            <input  {...register("place", { required: "Please enter a place" })} type="text" id="voice-search" className="  xl:w-[641px] bg-[#1F293780] border border-[#4B5563B2] text-gray-900 text-sm rounded-lg focus:ring-[#38235C] focus:border-[#38235C] block  ps-10 p-2.5" placeholder="Search for a place..." />
 
                         </div>
-                        <button type="submit" className="inline-flex items-center py-3 px-8 ms-10 font-inter font-medium text-base leading-none tracking-normal text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 ">
+                        <button type="submit" className="inline-flex items-center py-3 px-8 ms-4 lg:ms-10 font-inter font-medium text-base leading-none tracking-normal text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 ">
                             Search
                         </button>
                     </form>
