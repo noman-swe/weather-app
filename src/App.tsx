@@ -10,7 +10,7 @@ function App() {
     current: any;
     forecast: any;
   } | null>(null);
- 
+
 
   return (
     <>
@@ -23,7 +23,7 @@ function App() {
 
         <Route
           path="/weather"
-          element={<WeatherInfo />}
+          element={<WeatherInfo setWeatherData={setWeatherData} weatherData={weatherData} />}
         />
       </Routes>
     </>

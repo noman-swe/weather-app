@@ -13,4 +13,10 @@ export type WeatherInfoProps = {
     current: any;
     forecast: any;
   } | null;
+  setWeatherData: React.Dispatch<
+    React.SetStateAction<{
+      current: any;
+      forecast: any;
+    } | null>
+  >;
 };

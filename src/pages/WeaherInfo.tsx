@@ -4,14 +4,15 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { getHourlyForecast, getTimezone } from "../utils/dateAndTimes";
 import Header from "./Header";
+import type { WeatherInfoProps } from "../types/types";
 
 const API_KEY = "9d729cfd40c256defac28e6a8266b774";
 
 type WeatherFormInputs = { place: string };
 
-const WeatherInfo = () => {
+const WeatherInfo = ({ weatherData, setWeatherData }: WeatherInfoProps) => {
     const { register, handleSubmit, reset } = useForm<WeatherFormInputs>();
-    const [weatherData, setWeatherData] = useState<any>(null);
+
     const [localTime, setLocalTime] = useState("");
 
     const onSubmit = async (data: WeatherFormInputs) => {
@@ -121,7 +122,7 @@ const WeatherInfo = () => {
                             <button className="bg-[#374151] border border-[#4B5563] py-1.5 px-3 rounded-lg text-sm">Tuesday</button>
                         </div>
 
-                        {hourly?.map((h:any, i:any) => (
+                        {hourly?.map((h: any, i: any) => (
                             <div key={i} className="flex items-start justify-between mt-4 border-b border-[#4B5563] py-3">
                                 <div className="flex gap-5">
                                     <span>☁️</span>
