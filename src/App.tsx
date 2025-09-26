@@ -23,7 +23,7 @@ function App() {
 
         <Route
           path="/weather"
-          element={<WeatherInfo weatherData={weatherData} />}
+          element={<WeatherInfo />}
         />
       </Routes>
     </>

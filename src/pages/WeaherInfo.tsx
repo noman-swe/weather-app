@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { formatTime, getHourlyForecast, getTimezone } from "../utils/dateAndTimes";
+import { getHourlyForecast, getTimezone } from "../utils/dateAndTimes";
 import Header from "./Header";
 
 const API_KEY = "9d729cfd40c256defac28e6a8266b774";
@@ -59,7 +59,7 @@ const WeatherInfo = () => {
             {!weatherData ? (
                 <div className="text-white mt-10 text-center">No weather data. Search for a city above.</div>
             ) : (
-                <div className="flex-col lg:flex items-start justify-start gap-6 mt-8">
+                <div className="flex xs:flex-col lg:flex items-start justify-start gap-6 mt-8">
                     {/* Main Weather Info */}
                     <section className="w-full lg:w-[70%] px-4 lg:px-0">
                         <div className="bg-gradient-to-br from-[#2563EB] to-[#9333EA] w-full rounded-2xl px-8 pt-8 text-white">
@@ -121,7 +121,7 @@ const WeatherInfo = () => {
                             <button className="bg-[#374151] border border-[#4B5563] py-1.5 px-3 rounded-lg text-sm">Tuesday</button>
                         </div>
 
-                        {hourly?.map((h, i) => (
+                        {hourly?.map((h:any, i:any) => (
                             <div key={i} className="flex items-start justify-between mt-4 border-b border-[#4B5563] py-3">
                                 <div className="flex gap-5">
                                     <span>☁️</span>

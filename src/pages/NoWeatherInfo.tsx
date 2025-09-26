@@ -1,4 +1,3 @@
-import React from 'react'
 import { icons } from '../../public/icons/icons'
 
 const NoWeatherInfo = () => {

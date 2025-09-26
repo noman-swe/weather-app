@@ -1,7 +1,7 @@
 
 import { icons } from '../../public/icons/icons'
 
-const Header = ({ register, handleSubmit, reset, onSubmit }: { register: any, handleSubmit: any, reset: any, onSubmit: any }) => {
+const Header = ({ register, handleSubmit,  onSubmit }: { register: any, handleSubmit: any, reset: any, onSubmit: any }) => {
     return (
         <div className=' w-full  px-10 sm:px-8 lg:px-2 xl:px-0 pt-[200px] sm:pt-[150px] lg:pt-[0px] '>
             <div className='flex items-center justify-between'>
