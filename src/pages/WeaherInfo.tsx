@@ -3,7 +3,7 @@ import { icons } from '../../public/icons/icons'
 const WeatherInfo = () => {
     return (
         <div>
-            <div className="min-h-screen [background-image:linear-gradient(to_bottom_right,#1e1a4f,#6a1b9a,#1e1a4f)] flex items-start justify-start xl:py-[300px] xl:px-[260px]">
+            <div className="min-h-screen [background-image:linear-gradient(to_bottom_right,#1e1a4f,#6a1b9a,#1e1a4f)] flex items-start justify-start gap-6 xl:py-[300px] xl:px-[260px]">
                 <section className='w-[70%]'>
                     <div className='bg-gradient-to-br from-[#2563EB] to-[#9333EA]  w-full rounded-2xl'>
                         <div className='px-8 pt-8 flex items-start justify-between text-white'>
@@ -128,8 +128,40 @@ const WeatherInfo = () => {
 
                 </section>
 
-                <section>
-                    
+                <section className='bg-[#1F293780] w-[30%] p-6 rounded-2xl '>
+                    <div className='flex justify-between '>
+                        <h3 className="font-roboto font-bold text-lg text-white leading-none tracking-normal">Hourly forecast</h3>
+                        <button className='bg-[#374151] border border-[#4B5563] py-1.5 px-3  text-white font-inter font-normal text-sm rounded-lg'>
+                            Tuesday
+                        </button>
+                    </div>
+
+                    <div className='flex items-start justify-between text-white mt-4 border-b border-[#4B5563] py-3'>
+                        <div className='flex gap-5'>
+
+                            <span>☁️</span>
+                            <p className='font-roboto font-normal text-lg'>3 PM</p>
+                        </div>
+                        <p className='font-roboto font-normal text-lg'>20°</p>
+                    </div>
+                    {/* 2 */}
+                    <div className='flex items-start justify-between text-white mt-4 border-b border-[#4B5563] py-3'>
+                        <div className='flex gap-5'>
+
+                            <span>☁️</span>
+                            <p className='font-roboto font-normal text-lg'>3 PM</p>
+                        </div>
+                        <p className='font-roboto font-normal text-lg'>20°</p>
+                    </div>
+                    {/* 3 */}
+                    <div className='flex items-start justify-between text-white mt-4 border-b border-[#4B5563] py-3'>
+                        <div className='flex gap-5'>
+
+                            <span>☁️</span>
+                            <p className='font-roboto font-normal text-lg'>3 PM</p>
+                        </div>
+                        <p className='font-roboto font-normal text-lg'>20°</p>
+                    </div>
                 </section>
             </div>
         </div>
