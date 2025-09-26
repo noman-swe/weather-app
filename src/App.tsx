@@ -7,11 +7,11 @@ function App() {
 
   return (
     <>
-      <WeatherInfo />
-      {/* <Routes>
+      {/* <WeatherInfo /> */}
+      <Routes>
         <Route path="/" element={<Weather />} />
         <Route path="/weather" element={<WeatherInfo />} />
-      </Routes> */}
+      </Routes>
     </>
   )
 }
